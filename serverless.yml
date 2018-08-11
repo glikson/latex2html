@@ -1,0 +1,19 @@
+service: diderot
+
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python2.7
+  stage: test
+package:
+  include:
+    handler.py
+    package.json
+    pandoc-2.2.3.2/bin/pandoc
+
+functions:
+  latex2html:
+    handler: handler.latex2html
+    memorySize: 128
+    timeout: 10
