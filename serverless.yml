@@ -9,7 +9,6 @@ provider:
 package:
   include:
     handler.py
-    package.json
     pandoc-2.2.3.2/bin/pandoc
 
 functions:
